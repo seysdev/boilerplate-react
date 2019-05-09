@@ -1,0 +1,5 @@
+const LOGIN_SUCCESS = '[LOGIN] LOGIN_SUCCESS';
+
+export {
+  LOGIN_SUCCESS
+}
