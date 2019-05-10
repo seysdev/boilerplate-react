@@ -8,7 +8,7 @@ import { Login } from '../login/login.container';
 
 function LoginLayout() {
   return (
-    <div className="login">
+    <div className="page-login">
       <Header />
       <Main>
         <Login />

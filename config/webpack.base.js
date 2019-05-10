@@ -7,6 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
+    alias: {
+      Ui: path.resolve(__dirname, '../src/ui'),
+      Api: path.resolve(__dirname, '../src/api'),
+      Assets: path.resolve(__dirname, '../src/assets'),
+      Features: path.resolve(__dirname, '../src/features')
+    },
     extensions: ['*', '.js', '.jsx']
   },
   module: {

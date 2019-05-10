@@ -1,36 +1,39 @@
 import React from "react";
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import './select.component.scss';
 
-function Select(props) {
+function UISelect(props) {
   const {
     className,
     name,
+    id,
     value,
     onChange,
-    options,
+    options = [{ key: 'Argentina', value: '0' }, { key: 'Peru', value: '1' }],
     placeholder
   } = props;
   return (
-    <select 
-      className={`ui-select ${className}`} 
+    <Select
+      className={className}
       name={name}
+      id={id}
       value={value}
       onChange={onChange}
     >
-      <option value="" disabled>{placeholder}</option>
-      {options.map(option => {
+      <MenuItem value="">{placeholder}</MenuItem>
+      {options.map(option, id => {
         return (
-          <option
-            key={option}
-            value={option}
-            label={option}>{option}
-          </option>
+          <MenuItem key={id} value={option.value}>
+            {option.key}
+          </MenuItem>
         );
       })}
-    </select>
+    </Select>
   )
 }
 
 export {
-  Select
+  UISelect
 }

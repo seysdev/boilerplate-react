@@ -1,24 +1,29 @@
 import React from "react";
+import Checkbox from '@material-ui/core/Checkbox';
+
 import './checkbox.component.scss';
 
-function Checkbox(props) {
+function UICheckbox(props) {
   const {
     className,
     name,
+    id,
     value,
+    checked,
     onChange
   } = props;
   return (
-    <input 
-      className={`ui-input-checkbox ${className}`} 
+    <Checkbox
+      className={`ui-input-checkbox ${className}`}
       name={name}
+      id={id}
       value={value}
+      checked={checked}
       onChange={onChange}
-      type="checkbox"
     />
   )
 }
 
 export {
-  Checkbox
+  UICheckbox
 }

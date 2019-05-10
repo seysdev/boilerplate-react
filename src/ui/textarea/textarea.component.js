@@ -1,27 +1,32 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField';
+
 import './textarea.component.scss';
 
-function Textarea(props) {
+function UITextarea(props) {
   const {
     className,
     name,
+    label,
+    id,
     value,
-    onChange
+    onChange,
+    rowsMax = '4'
   } = props;
   return (
-    <textarea
+    <TextField
       className={`ui-textarea ${className}`}
       name={name}
+      label={label}
+      multiline
+      rowsMax={rowsMax}
+      id={id}
       value={value}
       onChange={onChange}
-    >
-      {
-        value
-      }
-    </textarea>
+    />
   )
 }
 
 export {
-  Textarea
+  UITextarea
 }
