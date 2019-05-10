@@ -47,10 +47,8 @@ class Login extends Component {
   }
 
   handleChange(e) {
-    e.preventDefault();
     const target = e.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
-    console.log('value', value)
     const name = target.name;
 
     this.setState({
