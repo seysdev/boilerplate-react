@@ -6,11 +6,18 @@ import {
   Switch
 } from "react-router-dom";
 
-import { LoginLayout } from '../features/login';
-function Routes() {
+import { 
+  LoginLayout,
+  Landing,
+  RoutingDashboard
+} from '../features/dashboard';
+
+function RoutingRoot() {
   return (
-    <Router >
+    <Router>
       <Switch>
+        <Route path="/dashboard" component={RoutingDashboard}></Route>
+        <Route path="/landing" component={Landing}></Route>
         <Route path="/login" component={LoginLayout} />
         <Redirect exact from="/" to="/login" />
       </Switch>
@@ -19,6 +26,6 @@ function Routes() {
 }
 
 export {
-  Routes
+  RoutingRoot
 }
 

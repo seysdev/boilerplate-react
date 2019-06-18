@@ -1,14 +1,14 @@
 import React from "react";
 import { Provider } from 'react-redux';
 
-import { Routes } from './routes';
+import { RoutingRoot } from './routing';
 import { store } from './store';
 
 function App() {
   return (
-    <div className="Wrapper">
+    <div className="wrapper">
       <Provider store={store}>
-        <Routes />
+        <RoutingRoot />
       </Provider>
     </div>
   )

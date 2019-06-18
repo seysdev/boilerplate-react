@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Login extends Component {
+class Landing extends Component {
   render() {
     return (
-      <h1>Login</h1>
+      <h1>Landing</h1>
     )
   }
 }
 
 export {
-  Login
+  Landing
 }
